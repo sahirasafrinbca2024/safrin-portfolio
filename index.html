@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <title>Dev Portfolio — Terminal</title>
+        <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+        <div class="monitor-wrap">
+                <div class="monitor-bezel">
+                        <div class="monitor-screen">
+                                <div class="scanline"></div>
+                                <canvas id="matrixCanvas"></canvas>
+                                <div class="output">
+
+                                        <!-- ── PHOTO ── -->
+                                         <center>
+                                                <p class="t-amber bold">WELCOME TO MY PORTFOLIO</p>
+                                        <p class="t-purple">&#10022; DEVELOPER PORTRAIT</p>
+                                         <img src="sahira.jpg" alt="Sahira Safrin M" class="portrait" />
+                                        <p class="t-amber bold">Sahira Safrin M</p>
+                                        <p class="t-pink">Java Full Stack Developer</p>
+                                        <p class="t-gray">&#128205; Chennai, Tamil Nadu &#127470;&#127475;</p>
+                                         </center>
+                                        <!-- ── ABOUT ── -->
+                                        <p class="divider">──────────────────────────────────────────────</p>
+                                        <p class="t-purple bold">ABOUT ME</p>
+                                        <p class="divider">──────────────────────────────────────────────</p>
+                                        <p class="t-white">I'm a final year BCA student with a passion for Java full
+                                                stack</p>
+                                        <p class="t-white">development and building real-world applications.</p>
+                                        <p class="t-white">I love solving problems through code and turning creative</p>
+                                        <p class="t-white">ideas into functional, user-friendly software.</p>
+                                        <p class="t-cyan bold">&#10022; MY MOTIVE</p>
+                                        <p class="t-green">&#9656; Build applications that solve everyday problems.</p>
+                                        <p class="t-green">&#9656; Grow as a full stack developer and contribute to
+                                                impactful projects.</p>
+                                        <p class="t-green">&#9656; Never stop learning — one line of code at a time.</p>
+
+                                        <!-- ── WELCOME + HINT ── -->
+                                        <p class="divider">──────────────────────────────────────────────</p>
+                                        <p class="t-amber">Welcome! Click a command below or type in the command line to
+                                                explore:</p>
+                                        <p class="hints">
+                                                <a href="#help">help</a> &nbsp;·&nbsp;
+                                                <a href="#about">about</a> &nbsp;·&nbsp;
+                                                <a href="#skills">skills</a> &nbsp;·&nbsp;
+                                                <a href="#education">education</a> &nbsp;·&nbsp;
+                                                <a href="#experience">experience</a> &nbsp;·&nbsp;
+                                                <a href="#projects">projects</a> &nbsp;·&nbsp;
+                                                <a href="#certifications">certifications</a> &nbsp;·&nbsp;
+                                                <a href="#contact">contact</a> &nbsp;·&nbsp;
+                                                <a href="#hire">hire</a> &nbsp;·&nbsp;
+                                                <a href="#fun">fun</a>
+                                        </p>
+
+                                        <!-- ── CMD ZONE ── -->
+                                        <div class="cmd-zone">
+
+                                                <!-- ── HELP ── -->
+                                                <div id="help" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">help</span>
+                                                        </p>
+                                                        <p class="t-amber">┌─ AVAILABLE COMMANDS
+                                                                ──────────────────────────┐</p>
+                                                        <p class="t-amber">│ <a href="#about">about</a><span
+                                                                        class="t-gray"> Who I am &amp; my
+                                                                        motive</span></p>
+                                                        <p class="t-amber">│ <a href="#skills">skills</a><span
+                                                                        class="t-gray"> Tech stack &amp;
+                                                                        skill levels</span></p>
+                                                        <p class="t-amber">│ <a href="#education">education</a><span
+                                                                        class="t-gray"> Academic
+                                                                        background</span></p>
+                                                        <p class="t-amber">│ <a href="#experience">experience</a><span
+                                                                        class="t-gray"> Work
+                                                                        history</span></p>
+                                                        <p class="t-amber">│ <a href="#projects">projects</a><span
+                                                                        class="t-gray"> Things I've
+                                                                        built</span></p>
+                                                        <p class="t-amber">│ <a
+                                                                        href="#certifications">certifications</a><span
+                                                                        class="t-gray">
+                                                                        Badges &amp; certs</span></p>
+                                                        <p class="t-amber">│ <a href="#contact">contact</a><span
+                                                                        class="t-gray"> Get in touch</span>
+                                                        </p>
+                                                        <p class="t-amber">│ <a href="#hire">hire</a><span
+                                                                        class="t-gray"> Hire me (HR Portal)</span>
+                                                        </p>
+                                                        <p class="t-amber">│ <a href="#fun">fun</a><span class="t-gray">
+                                                                        Random facts about
+                                                                        me</span></p>
+                                                        <p class="t-amber">
+                                                                └───────────────────────────────────────────────┘</p>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── ABOUT ── -->
+                                                <div id="about" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">about</span>
+                                                        </p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-purple bold">ABOUT ME</p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-white">I'm a final year BCA student with a passion
+                                                                for Java full stack</p>
+                                                        <p class="t-white">development and building real-world
+                                                                applications.</p>
+                                                        <p class="t-white">I love solving problems through code and
+                                                                turning creative</p>
+                                                        <p class="t-white">ideas into functional, user-friendly
+                                                                software.</p>
+                                                        <p class="t-cyan bold">&#10022; MY MOTIVE</p>
+                                                        <p class="t-green">&#9656; Build applications that solve
+                                                                everyday problems.</p>
+                                                        <p class="t-green">&#9656; Grow as a full stack developer and
+                                                                contribute to impactful projects.</p>
+                                                        <p class="t-green">&#9656; Never stop learning — one line of
+                                                                code at a time.</p>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── SKILLS ── -->
+                                                <div id="skills" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">skills</span>
+                                                        </p>
+                                                        <p class="t-dim">──────────────────────────────────────────────
+                                                        </p>
+                                                        <p class="t-cyan bold">TECH STACK &amp; SKILL LEVELS</p>
+                                                        <p class="t-dim">──────────────────────────────────────────────
+                                                        </p>
+                                                        <div class="skill-row"><span
+                                                                        class="sk-name t-cyan">Java</span><span
+                                                                        class="sk-track"><span class="sk-fill"
+                                                                                style="width:85%;background:#ff6ec7"></span></span><span
+                                                                        class="sk-pct t-amber">85%</span></div>
+                                                        <div class="skill-row"><span class="sk-name t-cyan">HTML /
+                                                                        CSS</span><span class="sk-track"><span
+                                                                                class="sk-fill"
+                                                                                style="width:80%;background:#ffcc00"></span></span><span
+                                                                        class="sk-pct t-amber">80%</span></div>
+                                                        <div class="skill-row"><span
+                                                                        class="sk-name t-cyan">C++</span><span
+                                                                        class="sk-track"><span class="sk-fill"
+                                                                                style="width:75%;background:#00e5ff"></span></span><span
+                                                                        class="sk-pct t-amber">75%</span></div>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── EDUCATION ── -->
+                                                <div id="education" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">education</span>
+                                                        </p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-amber bold">EDUCATION</p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-pink bold">01 &nbsp;BCA (Bachelor of Computer
+                                                                Applications)</p>
+                                                        <p class="t-cyan">&nbsp;&nbsp;&nbsp;&#127979; Final Year —
+                                                                Pursuing</p>
+                                                        <p class="t-gray">&nbsp;&nbsp;&nbsp;&#128197; 2023–2026
+                                                                &nbsp;|&nbsp; &#127942; 66.8%</p>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── EXPERIENCE ── -->
+                                                <div id="experience" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">experience</span>
+                                                        </p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-green bold">WORK EXPERIENCE</p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-pink bold">&#9656; Final Year BCA Student</p>
+                                                        <p><span class="t-amber">Aspiring Java Full Stack
+                                                                        Developer</span> <span class="t-gray">(2023 –
+                                                                        Present)</span></p>
+                                                        <p class="t-white">&nbsp;&nbsp;· Building real-world projects
+                                                                using Java and web technologies.</p>
+                                                        <p class="t-white">&nbsp;&nbsp;· Learning full stack development
+                                                                with hands-on practice.</p>
+                                                        <p class="t-white">&nbsp;&nbsp;· Completed IBM certification to
+                                                                strengthen industry skills.</p>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── PROJECTS ── -->
+                                                <div id="projects" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">projects</span>
+                                                        </p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-purple bold">PROJECTS</p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <div class="proj-card">
+                                                                <span class="t-pink bold">&#9889; CookBook — Your
+                                                                        Kitchen Virtual Assistant</span>
+                                                                <span class="t-amber">&#128295; Java · HTML · CSS</span>
+                                                                <span class="t-white">A virtual kitchen assistant that
+                                                                        helps users discover recipes,
+                                                                        plan meals, and manage ingredients
+                                                                        effortlessly.</span>
+                                                        </div>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── CERTIFICATIONS ── -->
+                                                <div id="certifications" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">certifications</span>
+                                                        </p>
+                                                        <p class="t-dim">──────────────────────────────────────────────
+                                                        </p>
+                                                        <p class="t-amber bold">CERTIFICATIONS</p>
+                                                        <p class="t-dim">──────────────────────────────────────────────
+                                                        </p>
+                                                        <p><span class="t-green">01.</span> <span
+                                                                        class="t-white bold">IBM Certification</span>
+                                                                <span class="t-gray">— IBM</span>
+                                                        </p>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── CONTACT ── -->
+                                                <div id="contact" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">contact</span>
+                                                        </p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-cyan bold">CONTACT</p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p><span class="t-pink">&#128231; Email
+                                                                        &nbsp;&nbsp;&nbsp;</span> <span
+                                                                        class="t-white">safrinmoosa17@gmail.com</span>
+                                                        </p>
+                                                        <p class="t-green">&#10145; Currently open to new opportunities!
+                                                        </p>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── FUN ── -->
+                                                <div id="fun" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">fun</span>
+                                                        </p>
+                                                        <p class="t-dim">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                        </p>
+                                                        <p class="t-pink bold">FUN FACTS</p>
+                                                        <p class="t-dim">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                                        </p>
+                                                        <p class="t-white">&#9749; Fueled by chai and curiosity.</p>
+                                                        <p class="t-white">&#128187; Love building things that actually
+                                                                help people.</p>
+                                                        <p class="t-white">&#128218; Currently learning: Java Full Stack
+                                                                Development.</p>
+                                                        <p class="t-white">&#127859; Fun fact: I can cook better than I
+                                                                code (maybe).</p>
+                                                        <p class="t-white">&#127775; Goal: Land my dream developer role
+                                                                after BCA!</p>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── HIRE ── -->
+                                                <div id="hire" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span class="t-white">hire</span>
+                                                        </p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-purple bold">HIRE ME (HR PORTAL)</p>
+                                                        <p class="t-dim">══════════════════════════════════════════════
+                                                        </p>
+                                                        <p class="t-white" style="margin-bottom: 12px;">Greetings HR!
+                                                                Input your proposal details:</p>
+
+                                                        <form id="hireForm" class="retro-form"
+                                                                onsubmit="event.preventDefault(); submitHireForm();">
+                                                                <div class="form-row">
+                                                                        <span class="t-cyan bold">HR EMAIL
+                                                                                &gt;&nbsp;</span>
+                                                                        <input type="email" id="hrEmail" required
+                                                                                class="retro-input"
+                                                                                placeholder="hr@company.com"
+                                                                                autocomplete="off" />
+                                                                </div>
+                                                                <div class="form-row" style="margin-top: 10px;">
+                                                                        <span class="t-cyan bold">PROPOSAL
+                                                                                &gt;&nbsp;</span>
+                                                                        <textarea id="hrBody" required
+                                                                                class="retro-textarea"
+                                                                                placeholder="Describe job role, tech stack, and package details here..."
+                                                                                rows="4"></textarea>
+                                                                </div>
+                                                                <div class="form-actions" style="margin-top: 12px;">
+                                                                        <button type="submit" id="hireSubmitBtn"
+                                                                                class="retro-btn">[ SUBMIT PROPOSAL
+                                                                                ]</button>
+                                                                </div>
+                                                        </form>
+                                                        <div id="hireStatus" class="t-green bold"
+                                                                style="margin-top: 15px; display: none;"></div>
+
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                                <!-- ── ERROR ── -->
+                                                <div id="error-section" class="cmd-result">
+                                                        <p class="echo"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span>
+                                                                <span id="errorCommandName"
+                                                                        class="t-white">unknown</span>
+                                                        </p>
+                                                        <p class="t-pink">'<span id="errorCommandVal">unknown</span>' is
+                                                                not recognized as an internal or external command.</p>
+                                                        <p class="t-gray">Type "help" for a list of available commands.
+                                                        </p>
+                                                        <div class="prompt-row"><span
+                                                                        class="t-green">C:\visitor\portfolio&gt;</span><span
+                                                                        class="blink t-green">&#9608;</span></div>
+                                                </div>
+
+                                        </div><!-- /cmd-zone -->
+
+                                        <!-- ── INTERACTIVE CLI INPUT ── -->
+                                        <div class="terminal-input-container">
+                                                <span class="t-green">C:\visitor\portfolio&gt;</span>
+                                                <input type="text" id="terminalInput" autocomplete="off"
+                                                        spellcheck="false" autofocus />
+                                        </div>
+
+                                </div><!-- /output -->
+                        </div><!-- /monitor-screen -->
+                </div><!-- /monitor-bezel -->
+                <div class="monitor-stand"></div>
+                <div class="monitor-base"></div>
+        </div><!-- /monitor-wrap -->
+
+        <script src="terminal.js"></script>
+</body>
+
+</html>

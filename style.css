@@ -1,0 +1,448 @@
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0a0a0f;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+    --green: #39ff8a;
+    --cyan: #00e5ff;
+    --purple: #bf8bff;
+    --pink: #ff6ec7;
+    --amber: #ffcc00;
+    --blue: #5dadff;
+    --gray: #666688;
+    --white: #e0e0f5;
+    --dim: #3a3a5c;
+}
+
+/* ── Monitor ── */
+.monitor-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monitor-bezel {
+    background: linear-gradient(145deg, #1e1e2e, #111120);
+    border: 3px solid #2a2a3f;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 0 0 1px #0d0d1a, 0 0 60px rgba(100, 60, 255, .2), 0 30px 80px rgba(0, 0, 0, .8);
+    width: min(900px, 96vw);
+}
+
+.monitor-screen {
+    background: #080810;
+    border-radius: 8px;
+    padding: 20px 24px 16px;
+    height: min(84vh, 660px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    border: 1.5px solid #1a1a2e;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, .6);
+    scroll-behavior: smooth;
+}
+
+.monitor-screen::-webkit-scrollbar {
+    width: 6px;
+}
+
+.monitor-screen::-webkit-scrollbar-thumb {
+    background: #2a2a4a;
+    border-radius: 3px;
+}
+
+.scanline {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: 8px;
+    z-index: 10;
+    background: repeating-linear-gradient(to bottom, transparent 0, transparent 2px, rgba(0, 0, 0, .07) 2px, rgba(0, 0, 0, .07) 4px);
+}
+
+.monitor-stand {
+    width: 140px;
+    height: 26px;
+    background: linear-gradient(to bottom, #1a1a2a, #111118);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.monitor-base {
+    width: 200px;
+    height: 13px;
+    background: #111118;
+    border-radius: 0 0 8px 8px;
+}
+
+/* ── Output ── */
+.output {
+    font-size: 13.5px;
+    /* NO line-height override here — let p tags control it */
+}
+
+/* ALL text elements — tight, consistent */
+.output p,
+.output div.skill-row,
+.output div.proj-card span,
+.output div.prompt-row {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    display: block;
+}
+
+/* ── Colour tokens ── */
+.t-green {
+    color: var(--green);
+}
+
+.t-cyan {
+    color: var(--cyan);
+}
+
+.t-purple {
+    color: var(--purple);
+}
+
+.t-pink {
+    color: var(--pink);
+}
+
+.t-amber {
+    color: var(--amber);
+}
+
+.t-blue {
+    color: var(--blue);
+}
+
+.t-gray {
+    color: var(--gray);
+}
+
+.t-white {
+    color: var(--white);
+}
+
+.t-dim {
+    color: var(--dim);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* ── Divider lines ── */
+.divider {
+    color: var(--dim);
+    line-height: 1.5;
+}
+
+/* ── Hints row ── */
+.hints {
+    line-height: 1.5;
+    margin-bottom: 4px;
+}
+
+.hints a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.hints a:hover {
+    color: var(--cyan);
+    text-decoration: underline;
+}
+
+/* ── ASCII photo ── */
+.ascii-frame {
+    display: inline-flex;
+    flex-direction: column;
+    border: 1px solid var(--purple);
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: var(--cyan);
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 4px 0 4px 8px;
+    box-shadow: 0 0 12px rgba(191, 139, 255, .2);
+}
+
+.ascii-frame span {
+    display: block;
+    line-height: 1.5;
+}
+
+/* ── Links inside cmd output ── */
+a.t-blue {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+a.t-blue:hover {
+    text-decoration: underline;
+}
+
+/* ── Skill bars ── */
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.5;
+    padding: 1px 0;
+}
+
+.sk-name {
+    display: inline-block;
+    width: 130px;
+    flex-shrink: 0;
+    font-size: 13px;
+    color: var(--cyan);
+}
+
+.sk-track {
+    display: inline-block;
+    width: 190px;
+    height: 9px;
+    background: var(--dim);
+    border-radius: 5px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sk-fill {
+    display: block;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.sk-pct {
+    font-size: 12px;
+    color: var(--amber);
+}
+
+/* ── Project cards ── */
+.proj-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    border: 1px solid var(--dim);
+    border-left: 3px solid var(--purple);
+    padding: 6px 12px;
+    margin: 5px 0;
+    border-radius: 0 5px 5px 0;
+    background: rgba(191, 139, 255, .04);
+    line-height: 1.5;
+}
+
+.proj-card span {
+    display: block;
+    line-height: 1.5;
+}
+
+/* ── Echo line ── */
+.echo {
+    margin-bottom: 1px !important;
+    line-height: 1.5;
+}
+
+/* ── Prompt row ── */
+.prompt-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+/* ── Blinking cursor ── */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0
+    }
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+/* ═══════════════════════════════════
+   CSS :target ROUTING
+   All .cmd-result hidden by default.
+   Shown only when their id is in URL hash.
+═══════════════════════════════════ */
+.cmd-result {
+    display: none;
+}
+
+.cmd-result:target {
+    display: block;
+}
+
+/* Hide default prompt when any section is active */
+.cmd-zone:has(.cmd-result:target) .default-prompt {
+    display: none;
+}
+
+/* ── Mobile ── */
+@media(max-width:600px) {
+    .monitor-bezel {
+        padding: 10px;
+    }
+
+    .monitor-screen {
+        padding: 12px 10px;
+        height: 88vh;
+    }
+
+    .output {
+        font-size: 12px;
+    }
+
+    .sk-track {
+        width: 100px;
+    }
+
+    .sk-name {
+        width: 95px;
+    }
+}
+
+/* ── Matrix Canvas Overlay ── */
+#matrixCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.15;
+}
+
+.output {
+    position: relative;
+    z-index: 1;
+}
+
+/* ── Interactive CLI Input ── */
+.terminal-input-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+#terminalInput {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--green);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13.5px;
+    flex-grow: 1;
+    caret-color: var(--green);
+}
+
+/* Hide static prompt rows inside results since we have the interactive CLI input */
+.cmd-result .prompt-row {
+    display: none !important;
+}
+
+/* ── Retro HR Form ── */
+.retro-form {
+    border: 1.5px solid var(--dim);
+    padding: 14px 18px;
+    margin: 12px 0;
+    background: rgba(8, 8, 16, 0.7);
+    border-radius: 4px;
+    box-shadow: 0 0 15px rgba(57, 255, 138, 0.05);
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.form-row span {
+    flex-shrink: 0;
+    min-width: 110px;
+}
+
+.retro-input,
+.retro-textarea {
+    background: #040408;
+    border: 1px solid var(--dim);
+    color: var(--white);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 3px;
+    outline: none;
+    flex-grow: 1;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.retro-input:focus,
+.retro-textarea:focus {
+    border-color: var(--cyan);
+    box-shadow: 0 0 8px rgba(0, 229, 255, 0.3);
+}
+
+.retro-textarea {
+    resize: vertical;
+}
+
+.retro-btn {
+    background: transparent;
+    border: 1px solid var(--purple);
+    color: var(--purple);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.retro-btn:hover {
+    background: rgba(191, 139, 255, 0.15);
+    color: var(--white);
+    border-color: var(--pink);
+    box-shadow: 0 0 10px rgba(255, 110, 199, 0.3);
+}
+
+#hireStatus {
+    border: 1px solid var(--green);
+    padding: 10px;
+    background: rgba(57, 255, 138, 0.05);
+    border-radius: 4px;
+    margin-top: 15px;
+}
